@@ -2,7 +2,8 @@
 
 module Main where
 
-import Codec.Compression.Zlib
-import qualified Data.ByteString.Lazy.Char8 as BS
+import Codec.Compression.Zlib ()
 
-main = print $ compress $ BS.pack $( [| "test" |] )
+$(return []) -- this no-op TH splice is required to trigger the problem
+
+main = return ()
