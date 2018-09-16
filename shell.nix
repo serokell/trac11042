@@ -9,4 +9,7 @@ stdenv.mkDerivation rec {
     pkgs.cabal-install
     pkgs.pkgconfig
   ];
+  shellHook = ''
+    export LD_LIBRARY_PATH=${pkgs.zlib}/lib:$LD_LIBRARY_PATH
+  '';
 }
