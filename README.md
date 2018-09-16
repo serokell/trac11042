@@ -5,7 +5,7 @@ Steps to reproduce:
 1. Set up a NixOS system
 2. `$ nix-shell --pure`
 3. `$ cabal install zlib` (this will install `zlib` to `$HOME/.ghc`)
-4. `$ ghc --make -static -package base -package zlib -package bytestring -XHaskell2010 ./Main.hs`
+4. `$ ghc --make -static -package base -package zlib -package bytestring ./Main.hs`
 
 You will see the following failure:
 
